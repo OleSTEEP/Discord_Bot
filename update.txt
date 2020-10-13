@@ -1,0 +1,3 @@
+Updating discord.py library:
+
+pip install -U discord.py

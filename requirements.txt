@@ -1,0 +1,8 @@
+bs4
+discord.py
+requests
+datetime
+wikipedia
+memory_profiler
+googletrans
+selenium

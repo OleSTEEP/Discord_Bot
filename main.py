@@ -10,13 +10,9 @@ token = ''
 
 print("[Launch]Initialization...")
 
-import re
-import bs4
-import random
 import logging
 import discord
 import asyncio
-import requests
 from datetime import datetime
 from discord.ext import commands
 

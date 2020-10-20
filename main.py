@@ -18,7 +18,7 @@ from discord.ext import commands
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler(filename = 'logs/fima_log_{}_{}.log'.format(datetime.today().strftime('%d.%m.%Y'), str(datetime.now().strftime("%H.%M"))), encoding = 'utf-8', mode = 'w')
+handler = logging.FileHandler(filename = 'logs/{}_log_{}_{}.log'.format(bot_name, datetime.today().strftime('%d.%m.%Y'), str(datetime.now().strftime("%H.%M"))), encoding = 'utf-8', mode = 'w')
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 

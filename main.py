@@ -123,6 +123,27 @@ async def end(ctx):
     await ctx.send('Пожалуйста, подождите...') 
     from modules import end_command
     await ctx.send(embed = end_command.embed_return())
+    
+@client.command()
+async def yt(ctx, *link):
+    # Часть команды, которую не удалось поместить в модуле (Подлючение и получение голосового канала)
+    try:
+        voice_channel = ctx.message.author.voice.channel
+    except:
+        embed_obj = discord.Embed(title = 'YouTube', description = 'Для начала, подключитесь к голосовому каналу...')
+        await ctx.send(embed = embed_obj)
+        return
+    try:
+        voice = await voice_channel.connect(reconnect = True)
+    except:
+        try:
+            import os
+            os.remove('downloads/youtube_temp')
+        except:
+            pass
+
+    from modules import yt_command
+    await ctx.send(embed = yt_command.embed_return(ctx, link, voice))
 
 @client.command()
 async def help(ctx):
@@ -131,17 +152,18 @@ async def help(ctx):
     - news          (Новости)
     - time          (Время по МСК)
     - true          (Вероятность правдивости)
-    - wiki          (Википедия) (Использование: %wiki [Запрос])
-    - ban           (Бан!) (Использование: %ban [Участник] [Причина])
-    - kick          (Кик!) (Использование: %kick [Участник] [Причина])
-    - rand          (Генератор чисел) (Использование: %rand [От] [До])
-    - euro          (Курс евро рублями) (Использование: %euro [Количество])
+    - wiki          (Википедия) (Использование: wiki [Запрос])
+    - ban           (Бан!) (Использование: ban [Участник] [Причина])
+    - kick          (Кик!) (Использование: kick [Участник] [Причина])
+    - rand          (Генератор чисел) (Использование: rand [От] [До])
+    - euro          (Курс евро рублями) (Использование: euro [Количество])
     - end           (Подскажет, через сколько закончится обучение (До 31 мая))
-    - dollar        (Курс доллара рублями) (Использование: %dollar [Количество])
-    - trl           (Google Translate) (Использование: %trl [Текст] [Язык перевода])
-    - weather       (Погода в населённом пункте) (Использование: %wthr [Населённый пункт])
-    - yap           (Яндекс картинки (Отправляет в чат рандомную найденную картинку по запросу)) (Использование: %yap [Запрос])
-    - calc          (Калькулятор) (Использование: %calc [Число] [Знак] [Число]. Использование sqrt: %calc sqrt [Число])
+    - dollar        (Курс доллара рублями) (Использование: dollar [Количество])
+    - yt            (Проигрывание с YouTube) (Использование: yt [Ссылка на видео])
+    - trl           (Google Translate) (Использование: trl [Текст] [Язык перевода])
+    - weather       (Погода в населённом пункте) (Использование: wthr [Населённый пункт])
+    - calc          (Калькулятор) (Использование: calc [Число] [Знак] [Число]. Использование sqrt: calc sqrt [Число])
+    - yap           (Яндекс картинки (Отправляет в чат рандомную найденную картинку по запросу)) (Использование: yap [Запрос])
     ''')
     await ctx.send(embed = embed_obj)
 

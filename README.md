@@ -7,18 +7,18 @@
 * news          (Новости)  
 * time          (Время по МСК)  
 * true          (Вероятность правдивости)  
-* wiki          (Википедия) (`Использование: %wiki [Запрос]`)  
-* ban           (Бан!) (`Использование: %ban [Участник] [Причина]`)  
-* kick          (Кик!) (`Использование: %kick [Участник] [Причина]`)  
-* rand          (Генератор чисел) (`Использование: %rand [От] [До]`)  
-* euro          (Курс евро рублями) (`Использование: %euro [Количество]`)  
+* wiki          (Википедия) (`Использование: wiki [Запрос]`)  
+* ban           (Бан!) (`Использование: ban [Участник] [Причина]`)  
+* kick          (Кик!) (`Использование: kick [Участник] [Причина]`)  
+* rand          (Генератор чисел) (`Использование: rand [От] [До]`)  
+* euro          (Курс евро рублями) (`Использование: euro [Количество]`)  
 * end           (Подскажет, через сколько закончится обучение (До 31 мая))  
-* dollar        (Курс доллара рублями) (`Использование: %dollar [Количество]`)  
-* yt            (Проигрывание с YouTube) (`Использование: %yt [Ссылка на видео]`)  
-* trl           (Google Translate) (`Использование: %trl [Текст] [Язык перевода]`)  
-* weather       (Погода в населённом пункте) (`Использование: %weather [Населённый пункт]`)  
-* calc          (Калькулятор) (`Использование: %calc [Число] [Знак] [Число]`. `Использование sqrt: %calc sqrt [Число]`)  
-* yap           (Яндекс картинки (Отправляет в чат рандомную найденную картинку по запросу)) (`Использование: %yap [Запрос]`)  
+* dollar        (Курс доллара рублями) (`Использование: dollar [Количество]`)  
+* yt            (Проигрывание с YouTube) (`Использование: yt [Ссылка на видео]`)  
+* trl           (Google Translate) (`Использование: trl [Текст] [Язык перевода]`)  
+* weather       (Погода в населённом пункте) (`Использование: weather [Населённый пункт]`)  
+* calc          (Калькулятор) (`Использование: calc [Число] [Знак] [Число]`. `Использование sqrt: calc sqrt [Число]`)  
+* yap           (Яндекс картинки (Отправляет в чат рандомную найденную картинку по запросу)) (`Использование: yap [Запрос]`)  
 
 #### Запланированые команды
 * who           (Кто...)  
@@ -26,7 +26,9 @@
 
 ### Установка и настройка
 * Установите Python 3 (latest)  
-* Установите `geckodriver` (Linux) и Firefox  
+* Установите `geckodriver` (только для Linux) и Firefox  
+* Скачайте ffmpeg: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip[Windows], Linux: `sudo apt install ffmpeg`  
+* Распакуйте содержимое архива с ffmpeg в папку `modules` (Переименуйте папку `ffmpeg-4.3.1-2020-10-01-essentials_build` в `ffmpeg`) (Только для Windows)  
 * В командной строке `pip install -r /путь/в/папку/с/ботом/requirements.txt`  
 * В файле `main.py` впишите желаемое имя бота и ваш токен  
 
@@ -51,18 +53,18 @@ A ready-made Discord bot.
 * news          (News)  
 * time          (Moscow time)  
 * true          (Probability of truthfulness)  
-* wiki          (Wikipedia) (`Usage: %wiki [Request]`)  
-* ban           (Ban!) (`Usage: %ban [Member] [Reason]`)  
-* weather       (City weather) (`Usage: %weather [City]`)  
-* kick          (Kick!) (`Usage: %kick [Member] [Reason]`)  
-* yt            (YouTube Play) (`Usage: %yt [Video Link]`)  
-* rand          (Number Generator) (`Usage: %rand [From] [To]`)  
+* wiki          (Wikipedia) (`Usage: wiki [Request]`)  
+* ban           (Ban!) (`Usage: ban [Member] [Reason]`)  
+* weather       (City weather) (`Usage: weather [City]`)  
+* kick          (Kick!) (`Usage: kick [Member] [Reason]`)  
+* yt            (YouTube Play) (`Usage: yt [Video Link]`)  
+* rand          (Number Generator) (`Usage: rand [From] [To]`)  
 * end           (Tells how long the training will end (Until May 31))  
-* euro          (Euro exchange rate in rubles) (`Usage: %euro [Quantity]`)  
-* dollar        (Dollar exchange rate in rubles) (`Usage: %dollar [Amount]`)   
-* trl           (Google Translate) (`Usage: %trl [Text] [Translation Language]`)   
-* yap           (Yandex pictures (Sends random picture to chat on request)) (`Usage: %yap [Request]`)  
-* calc          (Calculator) (`Usage: %calc [Number] [Sign] [Number]`. `Usage sqrt: %calc sqrt [Number]`)  
+* euro          (Euro exchange rate in rubles) (`Usage: euro [Quantity]`)  
+* dollar        (Dollar exchange rate in rubles) (`Usage: dollar [Amount]`)   
+* trl           (Google Translate) (`Usage: trl [Text] [Translation Language]`)   
+* yap           (Yandex pictures (Sends random picture to chat on request)) (`Usage: yap [Request]`)  
+* calc          (Calculator) (`Usage: calc [Number] [Sign] [Number]`. `Usage sqrt: calc sqrt [Number]`)  
 
 #### Scheduled Commands
 * who           (Who ...)  
@@ -71,6 +73,8 @@ A ready-made Discord bot.
 ### Installation and configuration
 * Install Python 3 (latest)  
 * Install `geckodriver` (Linux only) and Firefox  
+* Download ffmpeg: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip[Windows], Linux: `sudo apt install ffmpeg`  
+* Unpack the contents of the ffmpeg archive into the `modules` folder (Rename the `ffmpeg-4.3.1-2020-10-01-essentials_build` folder to `ffmpeg`) (Windows only)  
 * On the command line, `pip install -r /path/to/bot/folder/requirements.txt`  
 * In the file `main.py`, enter the desired bot name and your tocken  
 

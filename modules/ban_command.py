@@ -1,12 +1,13 @@
 import discord
 
-def string_return(member, reason): 
+def string_return(member, reason):
+    success = False 
     if reason == None:
         string = 'Укажите причину бана!'
     else:
         try:
-            await member.ban(reason = reason)
+            success = True
             string = f'{member} успешно забанен!'
         except:
             string = 'Недостаточно прав!'
-    return string
+    return success, string

@@ -15,7 +15,7 @@
 * dollar        (Курс доллара рублями) (`Использование: %dollar [Количество]`)  
 * trl           (Google Translate) (`Использование: %trl [Текст] [Язык перевода]`)  
 * weather       (Погода в населённом пункте) (`Использование: %weather [Населённый пункт]`)  
-* yap           (Яндекс картинки (Отправляет в чат 5 картинок по запросу)) (`Использование: %yap [Запрос]`)  
+* yap           (Яндекс картинки (Отправляет в чат рандомную найденную картинку по запросу)) (`Использование: %yap [Запрос]`)  
 * calc          (Калькулятор) (`Использование: %calc [Число] [Знак] [Число]`. `Использование sqrt: %calc sqrt [Число]`)  
 
 #### Запланированые команды
@@ -58,7 +58,7 @@ A ready-made Discord bot.
 * dollar        (Dollar exchange rate in rubles) (`Usage:% dollar [Amount]`)  
 * trl           (Google Translate) (`Usage:% trl [Text] [Translation Language]`)  
 * weather       (City weather) (`Usage:% weather [City]`)  
-* yap           (Yandex pictures (Sends 5 pictures to chat on request)) (`Usage:% yap [Request]`)  
+* yap           (Yandex pictures (Sends random picture to chat on request)) (`Usage:% yap [Request]`)  
 * calc          (Calculator) (`Usage:% calc [Number] [Sign] [Number]`. `Usage sqrt:% calc sqrt [Number]`)  
 
 #### Scheduled Commands

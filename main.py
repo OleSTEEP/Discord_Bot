@@ -4,8 +4,9 @@
 
 #---------------------------------------------------------------
 # Options
-bot_name = ''
-token = ''
+bot_name = 'bot'
+token = 'NzA3OTgxMzEyMzE2NjcwMDMy.XrQs-g.sRn3OdWg5A9ZiZqCFR8eQaBh7xM'
+prefix = '%'
 #---------------------------------------------------------------
 
 print("[Launch]Initialization...")
@@ -16,6 +17,7 @@ import asyncio
 from datetime import datetime
 from discord.ext import commands
 
+# Создание логгера
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler(filename = 'logs/{}_log_{}_{}.log'.format(bot_name, datetime.today().strftime('%d.%m.%Y'), str(datetime.now().strftime("%H.%M"))), encoding = 'utf-8', mode = 'w')
@@ -24,9 +26,11 @@ logger.addHandler(handler)
 
 print("[Launch]Login...")
 
-client = commands.Bot(command_prefix = '%', help_command = None)
+# Создание клиента бота
+client = commands.Bot(command_prefix = prefix, help_command = None)
 
 @client.event
+# Готов к работе
 async def on_ready():
     print('[{} {}] '.format(datetime.today().strftime('%d.%m.%Y'), str(datetime.now().strftime("%H:%M:%S"))) + 'Login in {0.user}'.format(client))
 
@@ -123,11 +127,12 @@ async def help(ctx):
     - dollar        (Курс доллара рублями) (Использование: %dollar [Количество])
     - trl           (Google Translate) (Использование: %trl [Текст] [Язык перевода])
     - weather       (Погода в населённом пункте) (Использование: %wthr [Населённый пункт])
-    - yap           (Яндекс картинки (Отправляет в чат 5 картинок по запросу)) (Использование: %yap [Запрос])
+    - yap           (Яндекс картинки (Отправляет в чат рандомную найденную картинку по запросу)) (Использование: %yap [Запрос])
     - calc          (Калькулятор) (Использование: %calc [Число] [Знак] [Число]. Использование sqrt: %calc sqrt [Число])
     ''')
-    await ctx.send(embed = embed_obj)       
+    await ctx.send(embed = embed_obj)
 
+# Разделитель
 print("___________________________________________________")
 
 client.run(token)

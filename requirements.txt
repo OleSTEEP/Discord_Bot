@@ -6,3 +6,6 @@ wikipedia
 memory_profiler
 googletrans
 selenium
+ffmpeg
+pytube3
+re

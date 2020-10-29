@@ -103,6 +103,15 @@ async def ban(ctx, member: discord.Member, *, reason=None):
     if success == True:
         await member.ban(reason = reason)
     await ctx.send(string)
+    
+@client.command()
+@commands.has_permissions(kick_members=True)
+async def kick(ctx, member: discord.Member, *, reason=None):
+    from modules import kick_command
+    success, string = kick_command.string_return(member, reason)
+    if success == True:
+        await member.kick(reason = reason)
+    await ctx.send(string)
 
 @client.command()
 async def yap(ctx, *, question):
@@ -124,6 +133,7 @@ async def help(ctx):
     - true          (Вероятность правдивости)
     - wiki          (Википедия) (Использование: %wiki [Запрос])
     - ban           (Бан!) (Использование: %ban [Участник] [Причина])
+    - kick          (Кик!) (Использование: %kick [Участник] [Причина])
     - rand          (Генератор чисел) (Использование: %rand [От] [До])
     - euro          (Курс евро рублями) (Использование: %euro [Количество])
     - end           (Подскажет, через сколько закончится обучение (До 31 мая))

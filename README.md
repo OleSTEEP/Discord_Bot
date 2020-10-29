@@ -27,7 +27,7 @@
 ### Установка и настройка
 * Установите Python 3 (latest)  
 * Установите `geckodriver` (только для Linux) и Firefox  
-* Скачайте ffmpeg: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip[Windows], Linux: `sudo apt install ffmpeg`  
+* Скачайте ffmpeg: [Windows](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip), Linux: `sudo apt install ffmpeg`  
 * Распакуйте содержимое архива с ffmpeg в папку `modules` (Переименуйте папку `ffmpeg-4.3.1-2020-10-01-essentials_build` в `ffmpeg`) (Только для Windows)  
 * В командной строке `pip install -r /путь/в/папку/с/ботом/requirements.txt`  
 * В файле `main.py` впишите желаемое имя бота и ваш токен  
@@ -73,7 +73,7 @@ A ready-made Discord bot.
 ### Installation and configuration
 * Install Python 3 (latest)  
 * Install `geckodriver` (Linux only) and Firefox  
-* Download ffmpeg: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip[Windows], Linux: `sudo apt install ffmpeg`  
+* Download ffmpeg: [Windows](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip), Linux: `sudo apt install ffmpeg`  
 * Unpack the contents of the ffmpeg archive into the `modules` folder (Rename the `ffmpeg-4.3.1-2020-10-01-essentials_build` folder to `ffmpeg`) (Windows only)  
 * On the command line, `pip install -r /path/to/bot/folder/requirements.txt`  
 * In the file `main.py`, enter the desired bot name and your tocken  

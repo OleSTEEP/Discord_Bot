@@ -21,8 +21,7 @@
 
 #### Запланированые команды
 * who           (Кто...)  
-* goop          (Google картинки)   
-* kick          (Выгнать пользователя)  
+* goop          (Google картинки)    
 
 ### Установка и настройка
 * Установите Python 3 (latest)  
@@ -65,8 +64,7 @@ A ready-made Discord bot.
 
 #### Scheduled Commands
 * who           (Who ...)  
-* goop          (Google pictures)  
-* kick          (Kick user)  
+* goop          (Google pictures)   
 
 ### Installation and configuration
 * Install Python 3 (latest)  

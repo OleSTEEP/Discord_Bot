@@ -99,7 +99,10 @@ async def news(ctx):
 @commands.has_permissions(ban_members=True)
 async def ban(ctx, member: discord.Member, *, reason=None):
     from modules import ban_command
-    await ctx.send(ban_command.string_return(member, reason))
+    success, string = ban_command.string_return(member, reason)
+    if success == True:
+        await member.ban(reason = reason)
+    await ctx.send(string)
 
 @client.command()
 async def yap(ctx, *, question):

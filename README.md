@@ -5,13 +5,13 @@
 
 ### Возможности бота (Команды)
 * news          (Новости)  
-* time          (Время по МСК)  
 * true          (Вероятность правдивости)  
 * wiki          (Википедия) (`Использование: wiki [Запрос]`)  
 * ban           (Бан!) (`Использование: ban [Участник] [Причина]`)  
 * kick          (Кик!) (`Использование: kick [Участник] [Причина]`)  
 * rand          (Генератор чисел) (`Использование: rand [От] [До]`)  
 * euro          (Курс евро рублями) (`Использование: euro [Количество]`)  
+* time          (Время в заданном городе) (`Использование: time [Город]`)  
 * end           (Подскажет, через сколько закончится обучение (До 31 мая))  
 * dollar        (Курс доллара рублями) (`Использование: dollar [Количество]`)  
 * yt            (Проигрывание с YouTube) (`Использование: yt [Ссылка на видео]`)  
@@ -50,9 +50,9 @@ async def command_name(ctx):
 A ready-made Discord bot.
 
 ### Bot Features (Commands)
-* news          (News)  
-* time          (Moscow time)  
+* news          (News)   
 * true          (Probability of truthfulness)  
+* time          (Time in a given city) (`Usage: time [City]`)
 * wiki          (Wikipedia) (`Usage: wiki [Request]`)  
 * ban           (Ban!) (`Usage: ban [Member] [Reason]`)  
 * weather       (City weather) (`Usage: weather [City]`)  

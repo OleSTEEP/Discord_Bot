@@ -35,9 +35,9 @@ async def on_ready():
     print('[{} {}] '.format(datetime.today().strftime('%d.%m.%Y'), str(datetime.now().strftime("%H:%M:%S"))) + 'Login in {0.user}'.format(client))
 
 @client.command()
-async def time(ctx):
+async def time(ctx, *city):
     from modules import time_command
-    await ctx.send(time_command.string)
+    await ctx.send(embed = time_command.embed_return(city))
 
 @client.command()
 async def dollar(ctx, *dollars):
@@ -47,7 +47,6 @@ async def dollar(ctx, *dollars):
 @client.command()
 async def euro(ctx, *euros):
     from modules import euro_command
-
     await ctx.send(embed = euro_command.embed_return(euros))
 
 @client.command()
@@ -150,13 +149,13 @@ async def help(ctx):
     embed_obj = discord.Embed(title = 'Помощь', description =
     f'''Я - {bot_name} и вот что я могу:
     - news          (Новости)
-    - time          (Время по МСК)
     - true          (Вероятность правдивости)
     - wiki          (Википедия) (Использование: wiki [Запрос])
     - ban           (Бан!) (Использование: ban [Участник] [Причина])
     - kick          (Кик!) (Использование: kick [Участник] [Причина])
     - rand          (Генератор чисел) (Использование: rand [От] [До])
     - euro          (Курс евро рублями) (Использование: euro [Количество])
+    - time          (Время в заданном городе) (Использование: %time [Город])
     - end           (Подскажет, через сколько закончится обучение (До 31 мая))
     - dollar        (Курс доллара рублями) (Использование: dollar [Количество])
     - yt            (Проигрывание с YouTube) (Использование: yt [Ссылка на видео])
